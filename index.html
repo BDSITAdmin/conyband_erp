@@ -1,39 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ERP_Tool</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-    <div class="sidebar">
-      <div class="logo">
-        <img  src="assate/images.jpeg" alt="Logo">
 
-      </div>
-      <ul class="menu">
-        <li><button id="watchButton">Watch</button></li>
-        <li><button id="itemButton">Item</button></li>
-      </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP_Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+          <div class="logo">
+            <img src="assate/images.jpeg" alt="Logo" id="logoImage">
+        </div>
+        
+            <ul class="menu">
+                <li><button id="watchButton">Watch</button></li>
+                <li><button id="itemButton">Item</button></li>
+            </ul>
+        </div>
+
+        <!-- Main Content for Tabs -->
+        <div class="main-content">
+            <h1 id="sectionTitle">Welcome To Conyband</h1>
+
+            <!-- Watch Tab Section -->
+            <div id="watchTab" class="tab-content" hidden>
+                <h2>Watch List</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th>Item Category</th>
+                            <th>Quantity</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="watchTableBody"></tbody>
+                </table>
+                <button id="addWatch">Add Watch</button>
+            </div>
+
+            <!-- Item Tab Section -->
+            <div id="itemTab" class="tab-content" hidden>
+                <h2>Item List</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th>Item Category</th>
+                            <th>Quantity</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="itemTableBody"></tbody>
+                </table>
+                <button id="addItem">Add Item</button>
+            </div>
+        </div>
     </div>
-    <div class="main-content">
-      <h1 id="sectionTitle">Welcome To Coni Bands</h1>
-      <table id="dataTable" class="data-table" hidden>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody id="tableBody">
-        </tbody>
-      </table>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modalTitle">Add New Watch</h2>
+            <form id="addForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required><br><br>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required><br><br>
+
+                <label for="watchId">ID:</label>
+                <input type="text" id="watchId" name="watchId" required><br><br>
+
+                <button type="button" id="addNewBtn">Add</button>
+            </form>
+        </div>
     </div>
+    <!-- Add Item Modal Structure -->
+<div id="itemModal" class="modal">
+  <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2 id="itemModalTitle">Add New Item</h2>
+      <form id="addItemForm">
+          <label for="itemName">Name:</label>
+          <input type="text" id="itemName" name="itemName" required><br><br>
+
+          <label for="itemCategory">Category:</label>
+          <input type="text" id="itemCategory" name="itemCategory" required><br><br>
+
+          <label for="itemQuantity">Quantity:</label>
+          <input type="number" id="itemQuantity" name="itemQuantity" required><br><br>
+
+          <label for="itemId">ID:</label>
+          <input type="text" id="itemId" name="itemId" required><br><br>
+
+          <button type="button" id="addItemBtn">Add Item</button>
+      </form>
   </div>
-  
-  <script src="renderer.js"></script>
+</div>
+
+
+    <script src="renderer.js"></script>
 </body>
 </html>
