@@ -1,0 +1,14 @@
+{
+  "name": "my-erp-tool",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+     "start": "electron ."
+  },
+  "author": "Bigdoor",
+  "license": "ISC",
+  "description": "Bigdoor it solution",
+  "devDependencies": {
+    "electron": "^33.0.1"
+  }
+}

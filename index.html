@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP_Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="logo">
+        <img  src="assate/images.jpeg" alt="Logo">
+
+      </div>
+      <ul class="menu">
+        <li><button id="watchButton">Watch</button></li>
+        <li><button id="itemButton">Item</button></li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <h1 id="sectionTitle">Welcome To Coni Bands</h1>
+      <table id="dataTable" class="data-table" hidden>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <script src="renderer.js"></script>
+</body>
+</html>
